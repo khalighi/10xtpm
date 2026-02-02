@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask AI Hasti | 10X TPM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">10X TPM</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tools.html">The Toolkit</a></li>
+                <li><a href="projects.html">Playbooks</a></li>
+                <li><a href="ask.html" class="active">Ask AI Hasti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Ask AI Hasti</h1>
+            <p>Your AI-powered TPM assistant. Get instant recommendations on tools, workflows, and productivity hacks.</p>
+        </section>
+
+        <section class="chat-section-page">
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <img src="photos/hasti-amini.jpg" alt="AI Hasti">
+                    <span class="ai-badge">AI</span>
+                </div>
+                <div class="chat-intro">
+                    <h2>Chat with AI Hasti</h2>
+                    <p>I've trained my AI twin on everything I know about AI tools for TPMs. Ask about tool recommendations, workflow setups, or how to ship faster.</p>
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <div class="api-key-setup" id="apiKeySetup">
+                    <div class="setup-icon">🔑</div>
+                    <h3>Bring Your Own API Key</h3>
+                    <p>Enter your Claude API key to start chatting. Your key stays in your browser and is never stored on any server.</p>
+                    <div class="api-input-group">
+                        <input type="password" id="apiKeyInput" placeholder="sk-ant-api..." class="api-input">
+                        <button onclick="saveApiKey()" class="btn btn-primary">Connect</button>
+                    </div>
+                    <p class="api-help">Don't have a key? <a href="https://console.anthropic.com/" target="_blank">Get one from Anthropic</a></p>
+                </div>
+
+                <div class="chat-interface" id="chatInterface" style="display: none;">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message assistant">
+                            <div class="message-avatar">
+                                <img src="photos/hasti-amini.jpg" alt="AI Hasti">
+                            </div>
+                            <div class="message-content">
+                                <p>Hey! I'm AI Hasti. I can help you find the right AI tools, set up workflows, or 10X your productivity. What's on your mind?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <textarea id="userInput" placeholder="Ask about AI tools, workflows, productivity tips..." rows="1" onkeydown="handleKeyDown(event)"></textarea>
+                        <button onclick="sendMessage()" id="sendBtn" class="send-btn">
+                            <span>Send</span>
+                        </button>
+                    </div>
+                    <div class="chat-footer">
+                        <button onclick="clearChat()" class="text-btn">Clear chat</button>
+                        <button onclick="disconnectApi()" class="text-btn">Disconnect API</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-suggestions">
+                <p>Try asking:</p>
+                <div class="suggestion-chips">
+                    <button onclick="askSuggestion('What AI tools do you recommend for writing PRDs?')" class="chip">Best tools for PRDs?</button>
+                    <button onclick="askSuggestion('How do I automate my weekly status updates?')" class="chip">Automate status updates</button>
+                    <button onclick="askSuggestion('What\\'s your recommended meeting notes workflow?')" class="chip">Meeting notes workflow</button>
+                    <button onclick="askSuggestion('Claude vs ChatGPT - which should I use?')" class="chip">Claude vs ChatGPT?</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-logo">10X TPM</p>
+            <p class="footer-tagline">Ship faster. Communicate clearer. Work smarter.</p>
+            <p class="copyright">&copy; 2025 Hasti Amini</p>
+        </div>
+    </footer>
+
+    <script src="chat.js"></script>
+</body>
+</html>

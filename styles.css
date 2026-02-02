@@ -818,6 +818,15 @@ section {
     color: white;
 }
 
+.chat-section-page {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    color: white;
+    max-width: 900px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
 .chat-header {
     display: flex;
     align-items: center;
