@@ -98,7 +98,7 @@ function clearChat() {
                 <img src="photos/hasti-amini.jpg" alt="AI Hasti">
             </div>
             <div class="message-content">
-                <p>Hey! I'm AI Hasti. Ask me anything about AI tools for TPMs—which tools to use, how to set up workflows, or how to 10X your productivity. What's on your mind?</p>
+                <p>Hey! I'm AI Hasti. I can help you find the right AI tools, set up workflows, or 10X your productivity. What's on your mind?</p>
             </div>
         </div>
     `;
